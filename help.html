@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Utility Functions Documentation</title>
+</head>
+<body>
+    <h1>PHP Utility Functions Documentation</h1>
+
+    <section>
+        <h2>1. <code>formatDate($date, $format = 'd M Y')</code></h2>
+        <p>
+            This function formats a given date string into a specific format.
+        </p>
+        <h3>Parameters:</h3>
+        <ul>
+            <li><strong>$date</strong> (string) - The date to be formatted. It can be in any valid date format.</li>
+            <li><strong>$format</strong> (string, optional) - The desired output date format (default: 'd M Y').</li>
+        </ul>
+        <h3>Return:</h3>
+        <p>A formatted date string based on the provided format.</p>
+
+        <h3>Example:</h3>
+        <pre>
+$formattedDate = formatDate('2025-03-27', 'Y-m-d'); // Output: 2025-03-27
+        </pre>
+    </section>
+
+    <section>
+        <h2>2. <code>truncate($text, $length = 100, $suffix = '...')</code></h2>
+        <p>
+            This function truncates a string to a specified length and appends a suffix (default is '...').
+        </p>
+        <h3>Parameters:</h3>
+        <ul>
+            <li><strong>$text</strong> (string) - The text to truncate.</li>
+            <li><strong>$length</strong> (int, optional) - The maximum length of the string (default: 100).</li>
+            <li><strong>$suffix</strong> (string, optional) - The suffix to append (default: '...').</li>
+        </ul>
+        <h3>Return:</h3>
+        <p>A truncated string with the specified suffix.</p>
+
+        <h3>Example:</h3>
+        <pre>
+$truncatedText = truncate('This is a very long sentence that needs to be shortened.', 20); // Output: 'This is a very lo...'
+        </pre>
+    </section>
+
+    <section>
+        <h2>3. <code>verifyRecaptcha($recaptcha_response)</code></h2>
+        <p>
+            This function verifies a Google reCAPTCHA response to ensure that the user is human.
+        </p>
+        <h3>Parameters:</h3>
+        <ul>
+            <li><strong>$recaptcha_response</strong> (string) - The reCAPTCHA response token from the client-side.</li>
+        </ul>
+        <h3>Return:</h3>
+        <p>A boolean indicating whether the reCAPTCHA validation was successful (true) or not (false).</p>
+
+        <h3>Example:</h3>
+        <pre>
+$isValid = verifyRecaptcha($recaptchaResponseToken); // Output: true or false
+        </pre>
+    </section>
+
+    <section>
+        <h2>4. <code>fetch($url, array $options = [])</code></h2>
+        <p>
+            This function makes HTTP requests to APIs using cURL and returns the API response.
+        </p>
+        <h3>Parameters:</h3>
+        <ul>
+            <li><strong>$url</strong> (string) - The API URL to send the request to.</li>
+            <li><strong>$options</strong> (array, optional) - Configuration options (default: empty array). Available options:
+                <ul>
+                    <li><strong>method</strong> (string) - The HTTP method (default: 'GET').</li>
+                    <li><strong>headers</strong> (array) - Any custom headers to be included in the request.</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Return:</h3>
+        <p>An array containing the HTTP status code and the decoded response data (or the raw response).</p>
+
+        <h3>Example:</h3>
+        <pre>
+$response = fetch('https://jsonplaceholder.typicode.com/posts'); // Returns a response array with status and data
+        </pre>
+    </section>
+
+    <footer>
+        <p>Documentation for PHP Utility Functions - Version 1.0</p>
+    </footer>
+</body>
+</html>

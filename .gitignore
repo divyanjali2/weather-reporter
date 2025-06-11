@@ -1,0 +1,12 @@
+# Composer
+/vendor/
+
+# Node Modules
+/node_modules/
+
+# Environment Variables
+.env
+
+# Log Files
+*.log
+error_log
