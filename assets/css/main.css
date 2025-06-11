@@ -85,6 +85,12 @@ header .row .theme-toggle-btn svg {
 header .row body.dark-theme {
   background: #222;
   color: #f5f5f5;
+}
+
+@media (min-width: 1400px) {
+  header .header-logo {
+    height: 60px !important;
+  }
 } 
 
 /*# sourceMappingURL=main.css.map */
