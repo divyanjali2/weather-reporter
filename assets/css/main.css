@@ -121,9 +121,9 @@ header .row body.dark-theme {
 
 #homeHero .homehero-content {
   position: absolute;
-  top: 12%;
+  top: 6%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
   text-align: center;
 }
 
@@ -132,9 +132,25 @@ header .row body.dark-theme {
   border-color: transparent;
 }
 
+#homeHero .homehero-content .overview h1 {
+  font-size: 20px;
+  text-align: justify;
+  margin-top: 14px;
+  font-weight: 700;
+}
+
+@media (min-width: 1200px) {
+  #homeHero .homehero-content .overview h1 {
+    font-size: 26px !important;
+  }
+}
 @media (min-width: 1400px) {
   header .header-logo {
     height: 60px !important;
+  }
+  #homeHero .homehero-content .overview h1 {
+    font-size: 30px !important;
+    margin-top: 4%;
   }
 } 
 
