@@ -35,39 +35,10 @@
 <?php include('parts/header.php'); ?>
 <!-- Header ends -->
 
-<!-- Section one starts -->
-<section id="sectionOne" class="py-3 bg-warning">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="text-center">Section One</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, ex modi ut voluptatum veniam quod.</p>
-            </div>
-        </div>
-    </div>
+<section id="bg-image" class="position-relative w-100 h-100">
+    <img src="assets/images/bg-image.jpg" alt="Background Image" class="img-fluid w-100 vh-100 object-cover d-none d-lg-block position-absolute top-0 start-0">
+    <img src="assets/images/bg-img-small.jpg" alt="Background Image" class="img-fluid w-100 vh-100 object-cover d-md-block d-lg-none position-absolute top-0 start-0">
 </section>
-<!-- Section one ends -->
-
-<!-- Section two starts -->
-<section id="sectionTwo" class="py-3 bg-primary">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="text-center">Section Two</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, ex modi ut voluptatum veniam quod.</p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Section two ends -->
 
 <!-- Footer starts -->
 <?php include('parts/footer.php'); ?>
