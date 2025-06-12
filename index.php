@@ -129,8 +129,16 @@
             <div class="col-12 col-md-12 col-lg-5">
                 <div class="card">
                     <div class="card-body">
-                        <i class="fa-solid fa-cloud fa-xl"></i>
-                        <b>Weather</b>                    
+                        <div>
+                            <h4>Monday</h4>
+                            <p>6.00 : 28 . C</p>
+                            <h4>Monday</h4>
+                            <p>6.00 : 28 . C</p>
+                            <h4>Monday</h4>
+                            <p>6.00 : 28 . C</p>
+                            <h4>Monday</h4>
+                            <p>6.00 : 28 . C</p>
+                        </div>                  
                     </div>
                 </div>
             </div>
