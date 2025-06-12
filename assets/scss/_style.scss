@@ -120,5 +120,18 @@ header {
       object-fit: cover;
       height: inherit;
     }
+
+    .homehero-content {
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        .form-control {
+            border-radius: 0;
+            border-color: transparent;
+        }
+    }
 }
 

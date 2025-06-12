@@ -38,6 +38,29 @@
 <section id="homeHero">
     <img src="assets/images/bg-image.jpg" alt="Background Image" class="img-fluid w-100 vh-100 object-cover d-none d-lg-block position-absolute top-0 start-0">
     <img src="assets/images/bg-img-small.jpg" alt="Background Image" class="img-fluid w-100 vh-100 object-cover d-md-block d-lg-none position-absolute top-0 start-0">
+    <div class="homehero-content container">
+        <div class="row">
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fa-solid fa-cloud fa-xl"></i>
+                        <b>Weather</b>                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-lg-4 d-none d-md-flex">
+            </div>
+            <div class="col-6 col-md-6 col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form class="d-flex" role="search">
+                            <input class="form-control p-0" type="search" placeholder="Search" aria-label="Search">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Footer starts -->
