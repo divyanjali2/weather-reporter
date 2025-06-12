@@ -60,10 +60,36 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row my-3">
             <div class="col">
                 <div class="mt-3 overview">
                     <h1>Today's Overview - 7.54 PM</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fa-solid fa-cloud fa-xl"></i>
+                        <b>Weather</b>                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fa-solid fa-cloud fa-xl"></i>
+                        <b>Weather</b>                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fa-solid fa-cloud fa-xl"></i>
+                        <b>Weather</b>                    
+                    </div>
                 </div>
             </div>
         </div>
