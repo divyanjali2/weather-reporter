@@ -47,6 +47,12 @@
 
 header {
   background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 header .row {
   height: 8vh !important;
@@ -73,6 +79,30 @@ header .row .theme-toggle-btn svg {
 header .row body.dark-theme {
   background: #222;
   color: #f5f5f5;
+}
+
+#homeHero {
+  /* Add the overlay */
+}
+#homeHero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#homeHero {
+  position: relative;
+  overflow: hidden;
+  height: 93vh;
+}
+#homeHero img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: inherit;
 }
 
 @media (min-width: 1400px) {

@@ -35,7 +35,7 @@
 <?php include('parts/header.php'); ?>
 <!-- Header ends -->
 
-<section id="bg-image" class="position-relative w-100 h-100">
+<section id="homeHero">
     <img src="assets/images/bg-image.jpg" alt="Background Image" class="img-fluid w-100 vh-100 object-cover d-none d-lg-block position-absolute top-0 start-0">
     <img src="assets/images/bg-img-small.jpg" alt="Background Image" class="img-fluid w-100 vh-100 object-cover d-md-block d-lg-none position-absolute top-0 start-0">
 </section>
