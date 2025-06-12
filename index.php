@@ -68,23 +68,65 @@
             </div>
         </div>
         <div class="row g-4">
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-3">
                 <div class="card">
                     <div class="card-body">
-                        <i class="fa-solid fa-cloud fa-xl"></i>
-                        <b>Weather</b>                    
+                        <div>
+                            <i class="fa-solid fa-cloud-sun fa-xl"></i>
+                        </div>                  
+                        <div>
+                            <h2>28.6 . C</h2>
+                            <h3>Clear Sky</h3>
+                        </div>
+                        <hr>
+                        <div>
+                            <i class="fa-solid fa-location-dot fa-lg"></i> Colombo <br>
+                            <i class="fa-solid fa-calendar-days fa-lg"></i> 12 - 6 - 2025                       
+                        </div>                 
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-3 col-lg-2">
                 <div class="card">
                     <div class="card-body">
-                        <i class="fa-solid fa-cloud fa-xl"></i>
-                        <b>Weather</b>                    
+                        <i class="fa-solid fa-wind"></i>Wind Speed                        
+                        <h3>28km/h</h3>                   
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fa-solid fa-wind"></i>Wind Speed                        
+                        <h3>28km/h</h3>                   
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fa-solid fa-wind"></i>Wind Speed                        
+                        <h3>28km/h</h3>                   
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-12 col-lg-4">
+            <div class="col-12 col-md-3 col-lg-2">
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fa-solid fa-wind"></i>Wind Speed                        
+                        <h3>28km/h</h3>                   
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fa-solid fa-wind"></i>Wind Speed                        
+                        <h3>28km/h</h3>                   
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fa-solid fa-wind"></i>Wind Speed                        
+                        <h3>28km/h</h3>                   
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-5">
                 <div class="card">
                     <div class="card-body">
                         <i class="fa-solid fa-cloud fa-xl"></i>
