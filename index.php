@@ -68,20 +68,25 @@
             </div>
         </div>
         <div class="row g-4">
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-3 col-lg-3">
                 <div class="card">
                     <div class="card-body">
-                        <div>
+                        <div class="d-block d-lg-none">
                             <i class="fa-solid fa-cloud-sun fa-xl"></i>
+                        </div>                  
+                        <div class="d-none d-lg-block">
+                            <i class="fa-solid fa-cloud-sun fa-2xl"></i>
                         </div>                  
                         <div>
                             <h2>28.6 . C</h2>
                             <h3>Clear Sky</h3>
                         </div>
                         <hr>
-                        <div>
-                            <i class="fa-solid fa-location-dot fa-lg"></i> Colombo <br>
-                            <i class="fa-solid fa-calendar-days fa-lg"></i> 12 - 6 - 2025                       
+                        <div class="mb-3 mb-lg-0 weather-detail">
+                            <i class="fa-solid fa-location-dot fa-lg"></i> <p>Colombo</p> <br>
+                        </div>                 
+                        <div class="weather-detail">
+                            <i class="fa-solid fa-calendar-days fa-lg"></i> <p>12 - 6 - 2025  </p>                      
                         </div>                 
                     </div>
                 </div>
@@ -126,7 +131,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-12 col-lg-5">
+            <div class="col-12 col-md-3 col-lg-5">
                 <div class="card">
                     <div class="card-body">
                         <div>

@@ -135,6 +135,18 @@ header {
             }
         }
 
+        .weather-detail {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                margin-bottom: 0;
+                margin-left: 12px;
+                font-weight: 500;
+            }
+        }
+
         h2 {
             font-weight: 700;
         }

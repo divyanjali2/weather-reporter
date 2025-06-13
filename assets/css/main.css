@@ -141,6 +141,18 @@ header .row body.dark-theme {
   color: #ffffff;
 }
 
+#homeHero .homehero-content .weather-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#homeHero .homehero-content .weather-detail p {
+  margin-bottom: 0;
+  margin-left: 12px;
+  font-weight: 500;
+}
+
 #homeHero .homehero-content h2 {
   font-weight: 700;
 }
@@ -207,6 +219,9 @@ header .row body.dark-theme {
   #homeHero .homehero-content .overview h1 {
     font-size: 26px !important;
   }
+  #homeHero .homehero-content .weather-detail p {
+    font-size: 18px !important;
+  }
 }
 @media (min-width: 1400px) {
   header .header-logo {
@@ -215,6 +230,9 @@ header .row body.dark-theme {
   #homeHero .homehero-content .overview h1 {
     font-size: 30px !important;
     margin-top: 4%;
+  }
+  #homeHero .homehero-content .weather-detail p {
+    font-size: 22px !important;
   }
 } 
 
