@@ -94,19 +94,25 @@
             <div class="col-12 col-md-3 col-lg-2">
                 <div class="card">
                     <div class="card-body">
-                        <i class="fa-solid fa-wind"></i>Wind Speed                        
+                        <div class="wind-details">
+                            <i class="fa-solid fa-wind"></i> Wind Speed                        
+                        </div>
                         <h3>28km/h</h3>                   
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <i class="fa-solid fa-wind"></i>Wind Speed                        
+                        <div class="wind-details">
+                            <i class="fa-solid fa-wind"></i> Wind Speed                        
+                        </div>
                         <h3>28km/h</h3>                   
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <i class="fa-solid fa-wind"></i>Wind Speed                        
+                        <div class="wind-details">
+                            <i class="fa-solid fa-wind"></i> Wind Speed                        
+                        </div>
                         <h3>28km/h</h3>                   
                     </div>
                 </div>
@@ -114,19 +120,25 @@
             <div class="col-12 col-md-3 col-lg-2">
                 <div class="card">
                     <div class="card-body">
-                        <i class="fa-solid fa-wind"></i>Wind Speed                        
+                        <div class="wind-details">
+                            <i class="fa-solid fa-wind"></i> Wind Speed                        
+                        </div>
                         <h3>28km/h</h3>                   
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <i class="fa-solid fa-wind"></i>Wind Speed                        
+                        <div class="wind-details">
+                            <i class="fa-solid fa-wind"></i> Wind Speed                        
+                        </div>
                         <h3>28km/h</h3>                   
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <i class="fa-solid fa-wind"></i>Wind Speed                        
+                        <div class="wind-details">
+                            <i class="fa-solid fa-wind"></i> Wind Speed                        
+                        </div>
                         <h3>28km/h</h3>                   
                     </div>
                 </div>

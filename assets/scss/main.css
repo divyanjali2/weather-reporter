@@ -134,8 +134,18 @@ header .row body.dark-theme {
   margin-left: 12px;
   font-weight: 500;
 }
+#homeHero .homehero-content .wind-details {
+  margin-bottom: 0 !important;
+  font-weight: 500;
+}
 #homeHero .homehero-content h2 {
   font-weight: 700;
+}
+#homeHero .homehero-content h3 {
+  font-size: 20px;
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-weight: 400;
 }
 #homeHero .homehero-content .row.g-4 {
   height: 100%;

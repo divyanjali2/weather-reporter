@@ -147,8 +147,20 @@ header {
             }
         }
 
+        .wind-details {
+            margin-bottom: 0 !important;
+            font-weight: 500;
+        }
+
         h2 {
             font-weight: 700;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-top: 6px;
+            margin-bottom: 0;
+            font-weight: 400;
         }
 
         .row.g-4 {
