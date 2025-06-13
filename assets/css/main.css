@@ -94,37 +94,29 @@ header .row body.dark-theme {
 }
 
 #homeHero {
+  position: relative;
+  overflow: hidden;
+  min-height: 93vh;
+  width: 100%;
   /* Add the overlay */
 }
 
-#homeHero::before {
-  content: "";
+#homeHero img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-#homeHero {
-  position: relative;
-  overflow: hidden;
-  height: 93vh;
-}
-
-#homeHero img {
   -o-object-fit: cover;
   object-fit: cover;
-  height: inherit;
+  z-index: 1;
 }
 
 #homeHero .homehero-content {
-  position: absolute;
-  top: 6%;
-  left: 50%;
-  transform: translate(-50%);
-  text-align: center;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 2rem 1rem;
 }
 
 #homeHero .homehero-content .form-control {
@@ -137,6 +129,24 @@ header .row body.dark-theme {
   text-align: justify;
   margin-top: 14px;
   font-weight: 700;
+  color: #ffffff;
+}
+
+#homeHero .homehero-content .card {
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+#homeHero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 @media (min-width: 1200px) {

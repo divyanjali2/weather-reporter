@@ -36,8 +36,8 @@
 <!-- Header ends -->
 
 <section id="homeHero">
-    <img src="assets/images/bg-image.jpg" alt="Background Image" class="img-fluid w-100 vh-100 object-cover d-none d-lg-block position-absolute top-0 start-0">
-    <img src="assets/images/bg-img-small.jpg" alt="Background Image" class="img-fluid w-100 vh-100 object-cover d-md-block d-lg-none position-absolute top-0 start-0">
+    <img src="assets/images/bg-image.jpg" alt="Background Image" class="d-none d-lg-block">
+    <img src="assets/images/bg-img-small.jpg" alt="Background Image" class="d-md-block d-lg-none">
     <div class="homehero-content container">
         <div class="row">
             <div class="col-6 col-md-4 col-lg-2">
