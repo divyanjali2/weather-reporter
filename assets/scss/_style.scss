@@ -214,6 +214,123 @@ header {
                 }
             }
         }
+
+        .main-weather-card {
+            background: linear-gradient(135deg, rgb(76 99 156 / 73%), rgb(35 30 58));
+            backdrop-filter: blur(10px);
+            border: none;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+            }
+
+            .card-body {
+                color: white;
+
+                i {
+                    font-size: 2.5rem;
+                    margin-bottom: 1rem;
+                    background: rgba(255, 255, 255, 0.2);
+                    padding: 1rem;
+                    border-radius: 50%;
+                    backdrop-filter: blur(5px);
+                }
+
+                h2 {
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    margin-bottom: 0.5rem;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+                }
+
+                h3 {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: rgba(255, 255, 255, 0.9);
+                    margin-bottom: 1rem;
+                }
+
+                hr {
+                    border-color: rgba(255, 255, 255, 0.2);
+                    margin: 1rem 0;
+                }
+
+                .weather-detail {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    
+                    i {
+                        font-size: 1rem;
+                        padding: 0.5rem;
+                        margin-bottom: 0;
+                    }
+
+                    p {
+                        margin: 0;
+                        font-size: 1rem;
+                        color: rgba(255, 255, 255, 0.9);
+                    }
+                }
+            }
+        }
+
+        .wind-detail-card {
+            background: linear-gradient(144deg, rgb(6 60 124 / 90%), rgb(220 79 141 / 90%));            backdrop-filter: blur(10px);
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .card-body {
+                color: white;
+                padding: 1rem;
+
+                .wind-details {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    margin-bottom: 0.5rem;
+                    
+                    i {
+                        font-size: 1.2rem;
+                        background: rgba(255, 255, 255, 0.2);
+                        padding: 0.5rem;
+                        border-radius: 50%;
+                        backdrop-filter: blur(5px);
+                    }
+                }
+
+                h3 {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    margin: 0;
+                    padding-left: 0.5rem;
+                    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+                }
+            }
+
+            // Alternate gradient for every other card
+            &:nth-child(2) {
+                background: linear-gradient(135deg, rgb(16 101 97), rgb(196 113 140 / 49%));            
+            }
+
+            &:nth-child(3) {
+                background: linear-gradient(135deg, rgb(71 26 191), rgb(239 156 137 / 90%));            
+            }
+        }
     }
 
     /* Add the overlay */

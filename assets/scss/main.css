@@ -185,6 +185,108 @@ header .row body.dark-theme {
   flex-direction: column;
   justify-content: space-evenly;
 }
+#homeHero .homehero-content .main-weather-card {
+  background: linear-gradient(135deg, rgba(76, 99, 156, 0.73), rgb(35, 30, 58));
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+#homeHero .homehero-content .main-weather-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+#homeHero .homehero-content .main-weather-card .card-body {
+  color: white;
+}
+#homeHero .homehero-content .main-weather-card .card-body i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+#homeHero .homehero-content .main-weather-card .card-body h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+#homeHero .homehero-content .main-weather-card .card-body h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+}
+#homeHero .homehero-content .main-weather-card .card-body hr {
+  border-color: rgba(255, 255, 255, 0.2);
+  margin: 1rem 0;
+}
+#homeHero .homehero-content .main-weather-card .card-body .weather-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#homeHero .homehero-content .main-weather-card .card-body .weather-detail i {
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 0;
+}
+#homeHero .homehero-content .main-weather-card .card-body .weather-detail p {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+#homeHero .homehero-content .wind-detail-card {
+  background: linear-gradient(144deg, rgba(6, 60, 124, 0.9), rgba(220, 79, 141, 0.9));
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+#homeHero .homehero-content .wind-detail-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+#homeHero .homehero-content .wind-detail-card:last-child {
+  margin-bottom: 0;
+}
+#homeHero .homehero-content .wind-detail-card .card-body {
+  color: white;
+  padding: 1rem;
+}
+#homeHero .homehero-content .wind-detail-card .card-body .wind-details {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+#homeHero .homehero-content .wind-detail-card .card-body .wind-details i {
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem;
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+#homeHero .homehero-content .wind-detail-card .card-body h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding-left: 0.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+#homeHero .homehero-content .wind-detail-card:nth-child(2) {
+  background: linear-gradient(135deg, rgb(16, 101, 97), rgba(196, 113, 140, 0.49));
+}
+#homeHero .homehero-content .wind-detail-card:nth-child(3) {
+  background: linear-gradient(135deg, rgb(71, 26, 191), rgba(239, 156, 137, 0.9));
+}
 #homeHero::before {
   content: "";
   position: absolute;
