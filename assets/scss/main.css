@@ -124,6 +124,9 @@ header .row body.dark-theme {
   font-weight: 700;
   color: #ffffff;
 }
+#homeHero .homehero-content h2 {
+  font-weight: 700;
+}
 #homeHero .homehero-content .row.g-4 {
   height: 100%;
 }
