@@ -63,7 +63,7 @@
         <div class="row my-3">
             <div class="col">
                 <div class="mt-3 overview">
-                    <h1>Today's Overview - 7.54 PM</h1>
+                    <h1>Today's Overview at 7.54 PM</h1>
                 </div>
             </div>
         </div>
@@ -90,59 +90,58 @@
                         </div>                 
                     </div>
                 </div>
-            </div>
+            </div>            
+            <?php
+                $weatherDetails = [
+                    [
+                        'icon' => 'fa-wind',
+                        'title' => 'Wind Speed',
+                        'value' => '28km/h'
+                    ],
+                    [
+                        'icon' => 'fa-temperature-three-quarters',
+                        'title' => 'Temperature',
+                        'value' => '28°C'
+                    ],
+                    [
+                        'icon' => 'fa-droplet',
+                        'title' => 'Humidity',
+                        'value' => '65%'
+                    ],
+                    [
+                        'icon' => 'fa-sun',
+                        'title' => 'UV Index',
+                        'value' => '6.5'
+                    ],
+                    [
+                        'icon' => 'fa-temperature-high',
+                        'title' => 'Heat Index',
+                        'value' => '30°C'
+                    ],
+                    [
+                        'icon' => 'fa-person-shelter',
+                        'title' => 'Feels Like',
+                        'value' => '29°C'
+                    ]
+                ];
+
+                // Split the array into chunks of 3 for two columns
+                $chunks = array_chunk($weatherDetails, 3);
+                foreach ($chunks as $chunk):
+            ?>
             <div class="col-12 col-md-3 col-lg-2">
+                <?php foreach ($chunk as $detail): ?>
                 <div class="card wind-detail-card">
                     <div class="card-body">
                         <div class="wind-details">
-                            <i class="fa-solid fa-wind"></i> Wind Speed                        
+                            <i class="fa-solid <?php echo $detail['icon']; ?>"></i> <?php echo $detail['title']; ?>
                         </div>
-                        <h3>28km/h</h3>                   
+                        <h3><?php echo $detail['value']; ?></h3>
                     </div>
                 </div>
-                <div class="card wind-detail-card">
-                    <div class="card-body">
-                        <div class="wind-details">
-                            <i class="fa-solid fa-wind"></i> Wind Speed                        
-                        </div>
-                        <h3>28km/h</h3>                   
-                    </div>
-                </div>
-                <div class="card wind-detail-card">
-                    <div class="card-body">
-                        <div class="wind-details">
-                            <i class="fa-solid fa-wind"></i> Wind Speed                        
-                        </div>
-                        <h3>28km/h</h3>                   
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
-            <div class="col-12 col-md-3 col-lg-2">
-                <div class="card wind-detail-card">
-                    <div class="card-body">
-                        <div class="wind-details">
-                            <i class="fa-solid fa-wind"></i> Wind Speed                        
-                        </div>
-                        <h3>28km/h</h3>                   
-                    </div>
-                </div>
-                <div class="card wind-detail-card">
-                    <div class="card-body">
-                        <div class="wind-details">
-                            <i class="fa-solid fa-wind"></i> Wind Speed                        
-                        </div>
-                        <h3>28km/h</h3>                   
-                    </div>
-                </div>
-                <div class="card wind-detail-card">
-                    <div class="card-body">
-                        <div class="wind-details">
-                            <i class="fa-solid fa-wind"></i> Wind Speed                        
-                        </div>
-                        <h3>28km/h</h3>                   
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
             <div class="col-12 col-md-3 col-lg-5">
                 <div class="card">
                     <div class="card-body">
