@@ -36,7 +36,7 @@
 <!-- Header ends -->
 
 <section id="homeHero">
-    <img src="assets/images/bg-image.jpg" alt="Background Image" class="d-none d-lg-block">
+    <img src="assets/images/bg-img.jpeg" alt="Background Image" class="d-none d-lg-block">
     <img src="assets/images/bg-img-small.jpg" alt="Background Image" class="d-md-block d-lg-none">
     <div class="homehero-content container">
         <div class="row">
