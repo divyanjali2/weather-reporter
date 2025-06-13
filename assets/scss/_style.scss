@@ -134,6 +134,58 @@ header {
                 color: $white;
             }
         }
+
+        .row.g-4 {
+            height: 100%;
+            
+            > [class*='col-'] {
+                display: flex;
+                flex-direction: column;
+
+                &.col-12.col-md-3.col-lg-2 {
+                    .card {
+                        flex: 1;
+                        margin-bottom: 1rem;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        .card-body {
+                            padding: 1rem;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                        }
+                    }
+                }
+
+                // For single card columns
+                > .card {
+                    height: 100%;
+                    
+                    .card-body {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        // Weather icon and temperature card
+                        div:first-child {
+                            margin-bottom: 1rem;
+                        }
+
+                        // Forecast card
+                        div:only-child {
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     /* Add the overlay */

@@ -1,5 +1,10 @@
 @use 'variables' as *;
 
+*{
+    font-family: $font-primary;
+}
+
 .card {
     border-radius: 0;
+    text-align: center;
 }
