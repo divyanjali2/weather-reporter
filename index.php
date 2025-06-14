@@ -65,17 +65,9 @@ $currentDate = date('d - m - Y');
     <img src="assets/images/bg-img-small.jpg" alt="Background Image" class="d-md-block d-lg-none">
     <div class="homehero-content container">
         <div class="row">
-            <div class="col-6 col-md-4 col-lg-2">
-                <div class="card">
-                    <div class="card-body">
-                        <i class="fa-solid fa-cloud fa-xl"></i>
-                        <b>Weather</b>                    
-                    </div>
-                </div>
+            <div class="col-md-6 d-none d-md-flex">
             </div>
-            <div class="col-md-2 col-lg-4 d-none d-md-flex">
-            </div>
-            <div class="col-6 col-md-6 col-lg-6">
+            <div class="col-12 col-md-6">
                 <div class="card">
                     <div class="card-body">                        
                         <form class="d-flex position-relative search-form" role="search" onsubmit="return false;">
@@ -194,7 +186,7 @@ $currentDate = date('d - m - Y');
                             <div class="info-item">
                                 <div>
                                     <h4><i class="fa-solid fa-clock"></i> Time Zone</h4>
-                                    <p><?php echo $location ? $location['dewpoint_c'] : "--"; ?></p>
+                                    <p><?php echo $location ? $location['tz_id'] : "--"; ?></p>
                                 </div>
                             </div>
                             <div class="info-item">
