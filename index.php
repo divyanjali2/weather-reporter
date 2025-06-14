@@ -80,7 +80,7 @@ $currentDate = date('d - m - Y');
             </div>
         </div>
         <div class="row g-4">
-            <div class="col-12 col-md-3 col-lg-3">
+            <div class="col-12 col-md-4 col-xl-3">
                 <div class="card main-weather-card">
                     <div class="card-body">                        
                         <div class="d-block d-lg-none">
@@ -141,7 +141,7 @@ $currentDate = date('d - m - Y');
                 $chunks = array_chunk($weatherDetails, 3);
                 foreach ($chunks as $chunk):
             ?>
-            <div class="col-12 col-md-3 col-lg-2">
+            <div class="col-12 col-md-4 col-xl-2">
                 <?php foreach ($chunk as $detail): ?>
                 <div class="card wind-detail-card">
                     <div class="card-body">
@@ -154,7 +154,7 @@ $currentDate = date('d - m - Y');
                 <?php endforeach; ?>
             </div>
             <?php endforeach; ?>            
-            <div class="col-12 col-md-3 col-lg-5">
+            <div class="col-12 col-md-6 col-xl-5">
                 <div class="card location-details-card">
                     <div class="card-body">
                         <div class="location-info">                            
