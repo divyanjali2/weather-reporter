@@ -209,6 +209,10 @@ $currentDate = date('d - m - Y');
 
 <!-- Bootstrap -->
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    const defaultCity = "<?php echo DEFAULT_CITY; ?>";
+</script>
+
 <!-- Custom JS -->
 <script src="assets/js/script.js"></script>
 </body>

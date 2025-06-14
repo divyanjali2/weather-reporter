@@ -1,9 +1,15 @@
 <?php
 // weather-api.php
 
-function getWeatherData($city = "Colombo") {
-    $apiKey = "fec640d3091341e4807175233251206";
-    $apiUrl = "https://api.weatherapi.com/v1/current.json?key=$apiKey&q=" . urlencode($city);
+// Include configuration file if not already included
+if (!defined('WEATHER_API_KEY')) {
+    require_once 'config.php';
+}
+
+function getWeatherData($city = null) {
+    // Use default city from config if none provided
+    $city = $city ?? DEFAULT_CITY;
+    $apiUrl = "https://api.weatherapi.com/v1/current.json?key=" . WEATHER_API_KEY . "&q=" . urlencode($city);
     
     // Use try-catch to handle any errors
     try {

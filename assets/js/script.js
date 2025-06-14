@@ -7,7 +7,7 @@ window.addEventListener('load', function() {
 
 // Weather functionality
 document.addEventListener("DOMContentLoaded", function () {
-    const defaultCity = "Colombo";
+    // defaultCity is defined in the PHP file
     const searchInput = document.getElementById("citySearch");
     const searchButton = searchInput.nextElementSibling;
     const searchSpinner = document.getElementById("searchSpinner");
