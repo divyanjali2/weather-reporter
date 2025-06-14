@@ -22,6 +22,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.querySelector(".main-weather-card h2").textContent = `${data.current.temp_c}° C`;
                 document.querySelector(".main-weather-card h3").textContent = data.current.condition.text;
                 document.querySelector(".weather-detail p").textContent = data.location.name;
+                
+                // Update weather icons
+                const weatherIconSmall = document.querySelector(".weather-icon-small");
+                const weatherIconLarge = document.querySelector(".weather-icon-large");
+                if (weatherIconSmall && weatherIconLarge) {
+                    const iconUrl = `https:${data.current.condition.icon}`;
+                    weatherIconSmall.src = iconUrl;
+                    weatherIconLarge.src = iconUrl;
+                }
 
                 // Update location details card
                 const locationInfo = document.querySelector(".location-info");

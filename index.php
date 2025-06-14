@@ -82,13 +82,14 @@ $currentDate = date('d - m - Y');
         <div class="row g-4">
             <div class="col-12 col-md-3 col-lg-3">
                 <div class="card main-weather-card">
-                    <div class="card-body">
+                    <div class="card-body">                        
                         <div class="d-block d-lg-none">
-                            <i class="fa-solid fa-cloud-sun fa-xl"></i>
+                            <img src="<?php echo $current ? 'https:' . $current['condition']['icon'] : ''; ?>" alt="Weather Icon" class="weather-icon-small">
                         </div>                  
                         <div class="d-none d-lg-block">
-                            <i class="fa-solid fa-cloud-sun fa-2xl"></i>
-                        </div>                          <div>
+                            <img src="<?php echo $current ? 'https:' . $current['condition']['icon'] : ''; ?>" alt="Weather Icon" class="weather-icon-large">
+                        </div>   
+                        <div>
                             <h2><?php echo $current ? "{$current['temp_c']}° C" : "--° C"; ?></h2>
                             <h3><?php echo $current ? $current['condition']['text'] : "--"; ?></h3>
                         </div>
@@ -102,7 +103,8 @@ $currentDate = date('d - m - Y');
                     </div>
                 </div>
             </div>            
-            <?php                $weatherDetails = [
+            <?php                
+                $weatherDetails = [
                     [
                         'icon' => 'fa-wind',
                         'title' => 'Wind Speed',
@@ -171,7 +173,7 @@ $currentDate = date('d - m - Y');
                             <div class="info-item">
                                 <div>
                                     <h4><i class="fa-solid fa-clock"></i> Time Zone</h4>
-                                    <p><?php echo $location ? $location['tz_id'] : "--"; ?></p>
+                                    <p><?php echo $location ? $location['dewpoint_c'] : "--"; ?></p>
                                 </div>
                             </div>
                             <div class="info-item">

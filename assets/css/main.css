@@ -21,21 +21,25 @@
   justify-content: center;
   align-items: center;
 }
+
 #preloader img {
   width: 14rem;
 }
+
 #preloader span {
   font-size: 22px;
   font-weight: 700;
   color: #000000;
   font-family: "Roboto";
 }
+
 #preloader .dots {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 14px;
 }
+
 #preloader .dots div {
   width: 18px;
   height: 20px;
@@ -44,19 +48,21 @@
   border-radius: 50%;
   animation: bounce 0.6s infinite alternate;
 }
+
 #preloader .dots div:nth-child(2) {
   animation-delay: 0.2s;
 }
+
 #preloader .dots div:nth-child(3) {
   animation-delay: 0.4s;
 }
+
 @keyframes bounce {
   to {
     opacity: 0.3;
     transform: translate3d(0, -1rem, 0);
   }
 }
-
 header {
   background-color: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -66,17 +72,21 @@ header {
   width: 100%;
   z-index: 100;
 }
+
 header .row {
   height: 8vh !important;
 }
+
 header .row .header-left {
   display: flex;
   align-items: center;
 }
+
 header .row .header-logo {
   height: 40px;
   margin-right: 1rem;
 }
+
 header .row .theme-toggle-btn {
   background: none;
   border: none;
@@ -85,9 +95,11 @@ header .row .theme-toggle-btn {
   display: flex;
   align-items: center;
 }
+
 header .row .theme-toggle-btn svg {
   display: block;
 }
+
 header .row body.dark-theme {
   background: #222;
   color: #f5f5f5;
@@ -100,25 +112,30 @@ header .row body.dark-theme {
   width: 100%;
   /* Add the overlay */
 }
+
 #homeHero img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   z-index: 1;
 }
+
 #homeHero .homehero-content {
   position: relative;
   z-index: 2;
   width: 100%;
   padding: 2rem 1rem;
 }
+
 #homeHero .homehero-content .form-control {
   border-radius: 0;
   border-color: transparent;
 }
+
 #homeHero .homehero-content .overview h1 {
   font-size: 20px;
   text-align: justify;
@@ -126,152 +143,187 @@ header .row body.dark-theme {
   font-weight: 700;
   color: #ffffff;
 }
+
 #homeHero .homehero-content .weather-detail {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 #homeHero .homehero-content .weather-detail p {
   margin-bottom: 0;
   margin-left: 12px;
   font-weight: 500;
 }
+
 #homeHero .homehero-content .wind-details {
   margin-bottom: 0 !important;
   font-weight: 500;
 }
+
 #homeHero .homehero-content h2 {
   font-weight: 700;
 }
+
 #homeHero .homehero-content h3 {
   font-size: 20px;
   margin-top: 6px;
   margin-bottom: 0;
   font-weight: 400;
 }
+
 #homeHero .homehero-content .row.g-4 {
   height: 100%;
 }
+
 #homeHero .homehero-content .row.g-4 > [class*=col-] {
   display: flex;
   flex-direction: column;
 }
+
 #homeHero .homehero-content .row.g-4 > [class*=col-].col-12.col-md-3.col-lg-2 .card {
   flex: 1;
   margin-bottom: 1rem;
 }
+
 #homeHero .homehero-content .row.g-4 > [class*=col-].col-12.col-md-3.col-lg-2 .card:last-child {
   margin-bottom: 0;
 }
+
 #homeHero .homehero-content .row.g-4 > [class*=col-].col-12.col-md-3.col-lg-2 .card .card-body {
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
+
 #homeHero .homehero-content .row.g-4 > [class*=col-] > .card {
   height: 100%;
 }
+
 #homeHero .homehero-content .row.g-4 > [class*=col-] > .card .card-body {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
+
 #homeHero .homehero-content .row.g-4 > [class*=col-] > .card .card-body div:first-child {
   margin-bottom: 1rem;
 }
+
 #homeHero .homehero-content .row.g-4 > [class*=col-] > .card .card-body div:only-child {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
+
 #homeHero .homehero-content .main-weather-card {
   background: linear-gradient(135deg, rgba(76, 99, 156, 0.73), rgb(35, 30, 58));
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: none;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
+
 #homeHero .homehero-content .main-weather-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
+
 #homeHero .homehero-content .main-weather-card .card-body {
   color: white;
 }
+
 #homeHero .homehero-content .main-weather-card .card-body i {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   background: rgba(255, 255, 255, 0.2);
   padding: 1rem;
   border-radius: 50%;
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
+
 #homeHero .homehero-content .main-weather-card .card-body h2 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 #homeHero .homehero-content .main-weather-card .card-body h3 {
   font-size: 1.5rem;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 1rem;
 }
+
 #homeHero .homehero-content .main-weather-card .card-body hr {
   border-color: rgba(255, 255, 255, 0.2);
   margin: 1rem 0;
 }
+
 #homeHero .homehero-content .main-weather-card .card-body .weather-detail {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
+
 #homeHero .homehero-content .main-weather-card .card-body .weather-detail i {
   font-size: 1rem;
   padding: 0.5rem;
   margin-bottom: 0;
 }
+
 #homeHero .homehero-content .main-weather-card .card-body .weather-detail p {
   margin: 0;
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.9);
 }
+
 #homeHero .homehero-content .wind-detail-card {
   background: linear-gradient(144deg, rgba(6, 60, 124, 0.9), rgba(220, 79, 141, 0.9));
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: none;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   margin-bottom: 1rem;
 }
+
 #homeHero .homehero-content .wind-detail-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
+
 #homeHero .homehero-content .wind-detail-card:last-child {
   margin-bottom: 0;
 }
+
 #homeHero .homehero-content .wind-detail-card .card-body {
   color: white;
   padding: 1rem;
 }
+
 #homeHero .homehero-content .wind-detail-card .card-body .wind-details {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 0.5rem;
 }
+
 #homeHero .homehero-content .wind-detail-card .card-body .wind-details i {
   font-size: 1.2rem;
   background: rgba(255, 255, 255, 0.2);
   padding: 0.5rem;
   border-radius: 50%;
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
+
 #homeHero .homehero-content .wind-detail-card .card-body h3 {
   font-size: 1.5rem;
   font-weight: 600;
@@ -279,40 +331,50 @@ header .row body.dark-theme {
   padding-left: 0.5rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
+
 #homeHero .homehero-content .wind-detail-card:nth-child(2) {
   background: linear-gradient(135deg, rgb(16, 101, 97), rgba(196, 113, 140, 0.49));
 }
+
 #homeHero .homehero-content .wind-detail-card:nth-child(3) {
   background: linear-gradient(135deg, rgb(71, 26, 191), rgba(239, 156, 137, 0.9));
 }
+
 #homeHero .homehero-content .location-details-card {
   background: linear-gradient(135deg, rgba(49, 62, 80, 0.9), rgba(25, 29, 43, 0.9));
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: none;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
+
 #homeHero .homehero-content .location-details-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
+
 #homeHero .homehero-content .location-details-card .card-body {
   color: white;
   padding: 1.5rem;
 }
+
 #homeHero .homehero-content .location-details-card .card-body .card-title {
   font-size: 1.5rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.95);
 }
+
 #homeHero .homehero-content .location-details-card .card-body .card-title i {
   margin-right: 0.5rem;
 }
+
 #homeHero .homehero-content .location-details-card .card-body .location-info {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
+
 #homeHero .homehero-content .location-details-card .card-body .location-info .info-item {
   display: flex;
   align-items: flex-start;
@@ -320,16 +382,20 @@ header .row body.dark-theme {
   justify-content: center;
   margin-bottom: -1rem !important;
 }
+
 #homeHero .homehero-content .location-details-card .card-body .location-info .info-item i {
   font-size: 1.2rem;
   background: rgba(255, 255, 255, 0.2);
   padding: 0.75rem;
   border-radius: 50%;
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
+
 #homeHero .homehero-content .location-details-card .card-body .location-info .info-item div {
   flex: 1;
 }
+
 #homeHero .homehero-content .location-details-card .card-body .location-info .info-item div h4 {
   font-size: 1rem;
   font-weight: 600;
@@ -339,13 +405,16 @@ header .row body.dark-theme {
   align-items: center;
   gap: 0.5rem;
 }
+
 #homeHero .homehero-content .location-details-card .card-body .location-info .info-item div h4 i {
   font-size: 1rem;
   background: rgba(255, 255, 255, 0.2);
   padding: 0.5rem;
   border-radius: 50%;
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
+
 #homeHero .homehero-content .location-details-card .card-body .location-info .info-item div p {
   font-size: 1.1rem;
   margin: 0;
@@ -354,6 +423,29 @@ header .row body.dark-theme {
   padding-left: 2.5rem;
   text-align: left;
 }
+
+#homeHero .homehero-content .weather-icon-small {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem;
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+#homeHero .homehero-content .weather-icon-large {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.75rem;
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
 #homeHero::before {
   content: "";
   position: absolute;
@@ -384,6 +476,6 @@ header .row body.dark-theme {
   #homeHero .homehero-content .weather-detail p {
     font-size: 22px !important;
   }
-}
+} 
 
 /*# sourceMappingURL=main.css.map */
