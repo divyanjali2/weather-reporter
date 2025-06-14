@@ -257,8 +257,9 @@ header {
                 }
 
                 hr {
-                    border-color: rgba(255, 255, 255, 0.2);
+                    border-color: rgb(255, 255, 255);
                     margin: 1rem 0;
+                    opacity: 0.5;
                 }
 
                 .weather-detail {
