@@ -18,12 +18,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (data.error) {
                     console.error("Weather API Error:", data.error.message);
                     return;
-                }
-
-                // Update main weather card
+                }                // Update main weather card
                 document.querySelector(".main-weather-card h2").textContent = `${data.current.temp_c}° C`;
                 document.querySelector(".main-weather-card h3").textContent = data.current.condition.text;
                 document.querySelector(".weather-detail p").textContent = data.location.name;
+
+                // Update location details card
+                const locationInfo = document.querySelector(".location-info");
+                if (locationInfo) {
+                    const infoItems = locationInfo.querySelectorAll(".info-item p");
+                    infoItems[0].textContent = `${data.location.region}, ${data.location.country}`;
+                    infoItems[1].textContent = `Latitude: ${data.location.lat}, Longitude: ${data.location.lon}`;                    infoItems[2].textContent = data.location.tz_id;
+                    infoItems[3].textContent = data.location.localtime;
+                }
 
                 // Update date
                 const date = new Date();

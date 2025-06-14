@@ -151,20 +151,36 @@ $currentDate = date('d - m - Y');
                 </div>
                 <?php endforeach; ?>
             </div>
-            <?php endforeach; ?>
+            <?php endforeach; ?>            
             <div class="col-12 col-md-3 col-lg-5">
-                <div class="card">
+                <div class="card location-details-card">
                     <div class="card-body">
-                        <div>
-                            <h4>Monday</h4>
-                            <p>6.00 : 28 . C</p>
-                            <h4>Monday</h4>
-                            <p>6.00 : 28 . C</p>
-                            <h4>Monday</h4>
-                            <p>6.00 : 28 . C</p>
-                            <h4>Monday</h4>
-                            <p>6.00 : 28 . C</p>
-                        </div>                  
+                        <div class="location-info">                            
+                            <div class="info-item">
+                                <div>
+                                    <h4><i class="fa-solid fa-earth-asia"></i> Region</h4>
+                                    <p><?php echo $location ? "{$location['region']}, {$location['country']}" : "--"; ?></p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div>
+                                    <h4><i class="fa-solid fa-location-crosshairs"></i> Coordinates</h4>
+                                    <p><?php echo $location ? "Latitude: {$location['lat']}, Longitude	: {$location['lon']}" : "--"; ?></p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div>
+                                    <h4><i class="fa-solid fa-clock"></i> Time Zone</h4>
+                                    <p><?php echo $location ? $location['tz_id'] : "--"; ?></p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div>
+                                    <h4><i class="fa-solid fa-calendar-clock"></i> Local Time</h4>
+                                    <p><?php echo $location ? $location['localtime'] : "--"; ?></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
