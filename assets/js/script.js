@@ -9,16 +9,40 @@ window.addEventListener('load', function() {
 document.addEventListener("DOMContentLoaded", function () {
     const defaultCity = "Colombo";
     const searchInput = document.getElementById("citySearch");
+    const searchButton = searchInput.nextElementSibling;
+    const searchSpinner = document.getElementById("searchSpinner");
+    const weatherToast = new bootstrap.Toast(document.getElementById('weatherToast'));
     
-    // Function to update weather data
+    // Function to show toast message
+    function showToast(message) {
+        document.getElementById('toastMessage').textContent = message;
+        weatherToast.show();
+    }
+
+    // Function to toggle search loading state
+    function toggleSearchLoading(isLoading) {
+        searchButton.classList.toggle('d-none', isLoading);
+        searchSpinner.classList.toggle('d-none', !isLoading);
+        searchInput.disabled = isLoading;
+    }
+      // Function to update weather data
     function updateWeather(city) {
+        toggleSearchLoading(true);
+        
         fetch(`weather-api.php?city=${encodeURIComponent(city)}`)
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
             .then(data => {
+                toggleSearchLoading(false);
+                
                 if (data.error) {
-                    console.error("Weather API Error:", data.error.message);
+                    showToast(data.message || "Could not find weather data for this location. Please try another city.");
                     return;
-                }                // Update main weather card
+                }// Update main weather card
                 document.querySelector(".main-weather-card h2").textContent = `${data.current.temp_c}° C`;
                 document.querySelector(".main-weather-card h3").textContent = data.current.condition.text;
                 document.querySelector(".weather-detail p").textContent = data.location.name;
@@ -64,7 +88,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 });
             })
-            .catch(error => console.error("Fetch Error:", error));
+            .catch(error => {
+                console.error("Fetch Error:", error);
+                toggleSearchLoading(false);
+                showToast("Could not find weather data for this location. Please try another city.");
+            });
     }
 
     // Update current time
@@ -76,17 +104,34 @@ document.addEventListener("DOMContentLoaded", function () {
         const formattedHours = hours % 12 || 12;
         const formattedMinutes = minutes.toString().padStart(2, '0');
         document.getElementById('currentTime').textContent = `${formattedHours}.${formattedMinutes} ${ampm}`;
+    }    // Handle search input
+    function handleSearch() {
+        const city = searchInput.value.trim();
+        if (city) {
+            updateWeather(city);
+        } else {
+            showToast("Please enter a city name");
+        }
     }
 
-    // Handle search input
+    // Search on Enter key
     searchInput.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
             event.preventDefault();
-            const city = this.value.trim();
-            if (city) {
-                updateWeather(city);
-            }
+            handleSearch();
         }
+    });
+
+    // Search on button click
+    searchButton.addEventListener("click", function(event) {
+        event.preventDefault();
+        handleSearch();
+    });
+
+    // Add input event listener for real-time validation
+    searchInput.addEventListener("input", function() {
+        // Remove any non-letter characters except spaces and hyphens
+        this.value = this.value.replace(/[^a-zA-Z\s-]/g, '');
     });
 
     // Update time immediately and then every minute

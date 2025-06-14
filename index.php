@@ -47,6 +47,19 @@ $currentDate = date('d - m - Y');
 <?php include('parts/header.php'); ?>
 <!-- Header ends -->
 
+<!-- Toast container -->
+<div class="toast-container position-fixed top-0 end-0 p-3">
+    <div id="weatherToast" class="toast align-items-center text-white border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <i class="fa-solid fa-circle-exclamation me-2"></i>
+                <span id="toastMessage"></span>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
 <section id="homeHero">
     <img src="assets/images/bg-img.jpeg" alt="Background Image" class="d-none d-lg-block">
     <img src="assets/images/bg-img-small.jpg" alt="Background Image" class="d-md-block d-lg-none">
@@ -64,9 +77,17 @@ $currentDate = date('d - m - Y');
             </div>
             <div class="col-6 col-md-6 col-lg-6">
                 <div class="card">
-                    <div class="card-body">
-                        <form class="d-flex" role="search">
-                            <input id="citySearch" class="form-control p-0" type="search" placeholder="Search" aria-label="Search">
+                    <div class="card-body">                        
+                        <form class="d-flex position-relative search-form" role="search" onsubmit="return false;">
+                            <input id="citySearch" class="form-control p-2" type="search" placeholder="Search for a city..." aria-label="Search">
+                            <button type="button" class="btn btn-link position-absolute end-0 top-50 translate-middle-y border-0 text-dark pe-2">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <div id="searchSpinner" class="position-absolute end-0 top-50 translate-middle-y pe-2 d-none">
+                                <div class="spinner-border spinner-border-sm text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
