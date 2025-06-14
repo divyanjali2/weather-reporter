@@ -1,4 +1,16 @@
-<?php include('config.php');?>
+<?php 
+include('config.php');
+include('weather-api.php');
+
+// Get initial weather data
+$defaultCity = "Colombo";
+$weatherData = getWeatherData($defaultCity);
+$current = $weatherData['current'] ?? null;
+$location = $weatherData['location'] ?? null;
+
+// Format current date
+$currentDate = date('d - m - Y');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +66,7 @@
                 <div class="card">
                     <div class="card-body">
                         <form class="d-flex" role="search">
-                            <input class="form-control p-0" type="search" placeholder="Search" aria-label="Search">
+                            <input id="citySearch" class="form-control p-0" type="search" placeholder="Search" aria-label="Search">
                         </form>
                     </div>
                 </div>
@@ -63,7 +75,7 @@
         <div class="row my-3">
             <div class="col">
                 <div class="mt-3 overview">
-                    <h1>Today's Overview at 7.54 PM</h1>
+                    <h1>Today's Overview at <span id="currentTime"></span></h1>
                 </div>
             </div>
         </div>
@@ -76,52 +88,50 @@
                         </div>                  
                         <div class="d-none d-lg-block">
                             <i class="fa-solid fa-cloud-sun fa-2xl"></i>
-                        </div>                  
-                        <div>
-                            <h2>28.6 . C</h2>
-                            <h3>Clear Sky</h3>
+                        </div>                          <div>
+                            <h2><?php echo $current ? "{$current['temp_c']}° C" : "--° C"; ?></h2>
+                            <h3><?php echo $current ? $current['condition']['text'] : "--"; ?></h3>
                         </div>
                         <hr>
                         <div class="mb-3 mb-lg-0 weather-detail">
-                            <i class="fa-solid fa-location-dot fa-lg"></i> <p>Colombo</p> <br>
+                            <i class="fa-solid fa-location-dot fa-lg"></i> <p><?php echo $location ? $location['name'] : $defaultCity; ?></p> <br>
                         </div>                 
                         <div class="weather-detail">
-                            <i class="fa-solid fa-calendar-days fa-lg"></i> <p>12 - 6 - 2025  </p>                      
-                        </div>                 
+                            <i class="fa-solid fa-calendar-days fa-lg"></i> <p><?php echo $currentDate; ?></p>                      
+                        </div>  
                     </div>
                 </div>
             </div>            
-            <?php
-                $weatherDetails = [
+            <?php                $weatherDetails = [
                     [
                         'icon' => 'fa-wind',
                         'title' => 'Wind Speed',
-                        'value' => '28km/h'
+                        'value' => $current ? "{$current['wind_kph']} km/h" : "--"
                     ],
                     [
                         'icon' => 'fa-temperature-three-quarters',
                         'title' => 'Temperature',
-                        'value' => '28°C'
+                        'value' => $current ? "{$current['temp_c']}°C" : "--"
                     ],
                     [
                         'icon' => 'fa-droplet',
                         'title' => 'Humidity',
-                        'value' => '65%'
+                        'value' => $current ? "{$current['humidity']}%" : "--"
                     ],
                     [
                         'icon' => 'fa-sun',
                         'title' => 'UV Index',
-                        'value' => '6.5'
+                        'value' => $current ? $current['uv'] : "--"
                     ],
                     [
                         'icon' => 'fa-temperature-high',
                         'title' => 'Heat Index',
-                        'value' => '30°C'
+                        'value' => $current ? "{$current['feelslike_c']}°C" : "--"
                     ],
                     [
                         'icon' => 'fa-person-shelter',
                         'title' => 'Feels Like',
-                        'value' => '29°C'
+                        'value' => $current ? "{$current['feelslike_c']}°C" : "--"
                     ]
                 ];
 
