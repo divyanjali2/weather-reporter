@@ -66,9 +66,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (data.forecast && data.forecast.forecastday && data.forecast.forecastday[0]) {
                         const astro = data.forecast.forecastday[0].astro;
                         infoItems[3].innerHTML = `
-                            <i class="fa-solid fa-sunrise text-warning"></i> ${astro.sunrise}
+                            Sunrise at ${astro.sunrise}
                             &nbsp;&nbsp;
-                            <i class="fa-solid fa-sunset text-warning"></i> ${astro.sunset}
+                            Sunset at ${astro.sunset}
                         `;
                     }
                 }
