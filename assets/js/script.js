@@ -87,6 +87,33 @@ document.addEventListener("DOMContentLoaded", function () {
                         card.querySelector("h3").textContent = details[title];
                     }
                 });
+
+                // Update forecast table
+                const forecastTableBody = document.getElementById('forecastTableBody');
+                forecastTableBody.innerHTML = ''; // Clear existing rows
+
+                if (data.forecast && data.forecast.forecastday) {
+                    data.forecast.forecastday.forEach(day => {
+                        const date = new Date(day.date);
+                        const formattedDate = date.toLocaleDateString('en-US', {
+                            weekday: 'short',
+                            month: 'short',
+                            day: 'numeric'
+                        });
+
+                        const row = `
+                            <tr>
+                                <td>${formattedDate}</td>
+                                <td>${day.day.maxtemp_c}°C</td>
+                                <td>${day.day.mintemp_c}°C</td>
+                                <td>${day.day.daily_chance_of_rain}%</td>
+                                <td>${day.day.avghumidity}%</td>
+                                <td>${day.day.maxwind_kph} km/h</td>
+                            </tr>
+                        `;
+                        forecastTableBody.innerHTML += row;
+                    });
+                }
             })
             .catch(error => {
                 console.error("Fetch Error:", error);
