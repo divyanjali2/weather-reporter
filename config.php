@@ -10,7 +10,7 @@ $dotenv->load();
 $dotenv->required(['WEATHER_API_KEY', 'DEFAULT_CITY'])->notEmpty();
 
 // Define website settings
-define('WEBSITE_NAME', 'Website Reporter');
+define('WEBSITE_NAME', 'Weather Reporter');
 define('WEBSITE_DESCRIPTION', 'Website Reporter provides accurate, real-time weather updates, forecasts, and climate data for your location and around the world.');
 define('WEBSITE_KEYWORDS', 'weather, weather forecast, climate, temperature, humidity, weather updates, live weather, hourly forecast, daily forecast, Website Reporter');
 
