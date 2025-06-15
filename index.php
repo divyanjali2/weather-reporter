@@ -27,7 +27,7 @@ $currentDate = date('d-m-Y');
     <!-- Page Title -->
     <title><?= WEBSITE_NAME ?></title>
     <!-- Favicon -->
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/images/logo.jpg" type="image/x-icon">
     <!-- Canonical URL -->
     <link rel="canonical" href="">
     <!-- Fontawesome -->
