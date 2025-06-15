@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             const hourTime = new Date(hour.time);
                             return hourTime.getHours() > currentHour;
                         })
-                        .slice(0, 3);
+                        .slice(0, 4);
 
                     console.log('Next hours to display:', nextHours); // Debug log
 
