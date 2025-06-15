@@ -97,21 +97,21 @@ $currentDate = date('d - m - Y');
                 <div class="card main-weather-card">
                     <div class="card-body">                        
                         <div class="d-block d-lg-none">
-                            <img src="<?php echo $current ? 'https:' . $current['condition']['icon'] : ''; ?>" alt="Weather Icon" class="weather-icon-small">
+                            <img src="<?= $current ? 'https:' . $current['condition']['icon'] : ''; ?>" alt="Weather Icon" class="weather-icon-small">
                         </div>                  
                         <div class="d-none d-lg-block">
-                            <img src="<?php echo $current ? 'https:' . $current['condition']['icon'] : ''; ?>" alt="Weather Icon" class="weather-icon-large">
+                            <img src="<?=  $current ? 'https:' . $current['condition']['icon'] : ''; ?>" alt="Weather Icon" class="weather-icon-large">
                         </div>   
                         <div>
-                            <h2><?php echo $current ? "{$current['temp_c']}° C" : "--° C"; ?></h2>
-                            <h3><?php echo $current ? $current['condition']['text'] : "--"; ?></h3>
+                            <h2><?= $current ? "{$current['temp_c']}° C" : "--° C"; ?></h2>
+                            <h3><?= $current ? $current['condition']['text'] : "--"; ?></h3>
                         </div>
                         <hr>
                         <div class="mb-3 mb-lg-0 weather-detail">
-                            <i class="fa-solid fa-location-dot fa-lg"></i> <p><?php echo $location ? $location['name'] : $defaultCity; ?></p> <br>
+                            <i class="fa-solid fa-location-dot fa-lg"></i> <p><?=  $location ? $location['name'] : $defaultCity; ?></p> <br>
                         </div>                 
                         <div class="weather-detail">
-                            <i class="fa-solid fa-calendar-days fa-lg"></i> <p><?php echo $currentDate; ?></p>                      
+                            <i class="fa-solid fa-calendar-days fa-lg"></i> <p><?= $currentDate; ?></p>                      
                         </div>  
                     </div>
                 </div>
@@ -159,9 +159,9 @@ $currentDate = date('d - m - Y');
                 <div class="card wind-detail-card">
                     <div class="card-body">
                         <div class="wind-details">
-                            <i class="fa-solid <?php echo $detail['icon']; ?>"></i> <?php echo $detail['title']; ?>
+                            <i class="fa-solid <?= $detail['icon']; ?>"></i> <?= $detail['title']; ?>
                         </div>
-                        <h3><?php echo $detail['value']; ?></h3>
+                        <h3><?= $detail['value']; ?></h3>
                     </div>
                 </div>
                 <?php endforeach; ?>
@@ -174,25 +174,25 @@ $currentDate = date('d - m - Y');
                             <div class="info-item">
                                 <div>
                                     <h4><i class="fa-solid fa-earth-asia"></i> Region</h4>
-                                    <p><?php echo $location ? "{$location['region']}, {$location['country']}" : "--"; ?></p>
+                                    <p><?= $location ? "{$location['region']}, {$location['country']}" : "--"; ?></p>
                                 </div>
                             </div>
                             <div class="info-item">
                                 <div>
                                     <h4><i class="fa-solid fa-location-crosshairs"></i> Coordinates</h4>
-                                    <p><?php echo $location ? "Latitude: {$location['lat']}, Longitude	: {$location['lon']}" : "--"; ?></p>
+                                    <p><?= $location ? "Latitude: {$location['lat']}, Longitude	: {$location['lon']}" : "--"; ?></p>
                                 </div>
                             </div>
                             <div class="info-item">
                                 <div>
                                     <h4><i class="fa-solid fa-clock"></i> Time Zone</h4>
-                                    <p><?php echo $location ? $location['tz_id'] : "--"; ?></p>
+                                    <p><?= $location ? $location['tz_id'] : "--"; ?></p>
                                 </div>
                             </div>
                             <div class="info-item">
                                 <div>
                                     <h4><i class="fa-solid fa-calendar-clock"></i> Local Time</h4>
-                                    <p><?php echo $location ? $location['localtime'] : "--"; ?></p>
+                                    <p><?= $location ? $location['localtime'] : "--"; ?></p>
                                 </div>
                             </div>
                         </div>
@@ -262,7 +262,7 @@ $currentDate = date('d - m - Y');
 <!-- Bootstrap -->
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script>
-    const defaultCity = "<?php echo DEFAULT_CITY; ?>";
+    const defaultCity = "<?= DEFAULT_CITY; ?>";
 </script>
 
 <!-- Custom JS -->
