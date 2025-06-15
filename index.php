@@ -191,8 +191,12 @@ $currentDate = date('d-m-Y');
                             </div>
                             <div class="info-item">
                                 <div>
-                                    <h4><i class="fa-solid fa-calendar-clock"></i> Local Time</h4>
-                                    <p><?= $location ? $location['localtime'] : "--"; ?></p>
+                                    <h4><i class="fa-solid fa-sun"></i> Sunrise & Sunset</h4>
+                                    <p>
+                                        <i class="fa-solid fa-sunrise text-warning"></i> <?= isset($weatherData['forecast']['forecastday'][0]['astro']['sunrise']) ? $weatherData['forecast']['forecastday'][0]['astro']['sunrise'] : "--"; ?>
+                                        &nbsp;&nbsp;
+                                        <i class="fa-solid fa-sunset text-warning"></i> <?= isset($weatherData['forecast']['forecastday'][0]['astro']['sunset']) ? $weatherData['forecast']['forecastday'][0]['astro']['sunset'] : "--"; ?>
+                                    </p>
                                 </div>
                             </div>
                         </div>

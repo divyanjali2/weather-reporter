@@ -60,8 +60,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (locationInfo) {
                     const infoItems = locationInfo.querySelectorAll(".info-item p");
                     infoItems[0].textContent = `${data.location.region}, ${data.location.country}`;
-                    infoItems[1].textContent = `Latitude: ${data.location.lat}, Longitude: ${data.location.lon}`;                    infoItems[2].textContent = data.location.tz_id;
-                    infoItems[3].textContent = data.location.localtime;
+                    infoItems[1].textContent = `Latitude: ${data.location.lat}, Longitude: ${data.location.lon}`;
+                    infoItems[2].textContent = data.location.tz_id;
+                    // Update sunrise and sunset
+                    if (data.forecast && data.forecast.forecastday && data.forecast.forecastday[0]) {
+                        const astro = data.forecast.forecastday[0].astro;
+                        infoItems[3].innerHTML = `
+                            <i class="fa-solid fa-sunrise text-warning"></i> ${astro.sunrise}
+                            &nbsp;&nbsp;
+                            <i class="fa-solid fa-sunset text-warning"></i> ${astro.sunset}
+                        `;
+                    }
                 }
 
                 // Update date
