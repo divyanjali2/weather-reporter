@@ -90,15 +90,67 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Update forecast table
                 const forecastTableBody = document.getElementById('forecastTableBody');
+                const hourlyForecastTableBody = document.getElementById('hourlyForecastTableBody');
                 forecastTableBody.innerHTML = ''; // Clear existing rows
+                hourlyForecastTableBody.innerHTML = ''; // Clear existing rows
 
+                console.log('Received weather data:', data); // Debug log
+
+                // Update hourly forecast for today
+                if (data.forecast && data.forecast.forecastday && data.forecast.forecastday[0]) {
+                    console.log('Processing hourly forecast...'); // Debug log
+                    const now = new Date();
+                    const currentHour = now.getHours();
+                    const hours = data.forecast.forecastday[0].hour;
+                    
+                    console.log('Current hour:', currentHour); // Debug log
+                    console.log('Available hours:', hours); // Debug log
+                    
+                    // Get next 3 hours from current hour
+                    const nextHours = hours
+                        .filter(hour => {
+                            const hourTime = new Date(hour.time);
+                            return hourTime.getHours() > currentHour;
+                        })
+                        .slice(0, 3);
+
+                    console.log('Next hours to display:', nextHours); // Debug log
+
+                    nextHours.forEach(hour => {
+                        const hourTime = new Date(hour.time);
+                        const formattedTime = hourTime.toLocaleTimeString('en-US', {
+                            hour: 'numeric',
+                            minute: '2-digit',
+                            hour12: true
+                        });
+
+                        const row = `
+                            <tr>
+                                <td>${formattedTime}</td>
+                                <td>${hour.temp_c}°C</td>
+                                <td>${hour.feelslike_c}°C</td>
+                                <td>${hour.chance_of_rain}%</td>
+                                <td>${hour.humidity}%</td>
+                                <td>${hour.wind_kph} km/h</td>
+                            </tr>
+                        `;
+                        hourlyForecastTableBody.innerHTML += row;
+                    });
+                } else {
+                    console.log('No hourly forecast data available'); // Debug log
+                }
+
+                // Update daily forecast table
                 if (data.forecast && data.forecast.forecastday) {
+                    console.log('Processing daily forecast...'); // Debug log
                     const today = new Date().toDateString();
                     // Filter out today's date and get next 5 days
                     const futureDays = data.forecast.forecastday
                         .filter(day => new Date(day.date).toDateString() !== today)
                         .slice(0, 5);  // Get only the next 5 days
-                    
+
+                    console.log('Future days to display:', futureDays); // Debug log
+
                     futureDays.forEach(day => {
                         const date = new Date(day.date);
                         const formattedDate = date.toLocaleDateString('en-US', {
@@ -114,10 +166,13 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <td>${day.day.mintemp_c}°C</td>
                                 <td>${day.day.daily_chance_of_rain}%</td>
                                 <td>${day.day.avghumidity}%</td>
+                                <td>${day.day.maxwind_kph} km/h</td>
                             </tr>
                         `;
                         forecastTableBody.innerHTML += row;
                     });
+                } else {
+                    console.log('No daily forecast data available'); // Debug log
                 }
             })
             .catch(error => {

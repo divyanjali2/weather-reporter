@@ -200,25 +200,54 @@ $currentDate = date('d - m - Y');
                 </div>
             </div>
         </div>
-        <!-- Weather Forecast Table -->
+        <!-- Hourly Forecast Table -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card forecast-card hourly-forecast-card">
+                    <div class="card-body">
+                        <h3 class="text-white mb-4"><i class="fa-solid fa-clock"></i> Next 3 Hours Forecast</h3>
+                        <div class="table-responsive">
+                            <table class="table table-dark table-hover forecast-table hourly-forecast-table">
+                                <thead>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Condition</th>
+                                        <th>Temperature</th>
+                                        <th>Feels Like</th>
+                                        <th>Rain Chance</th>
+                                        <th>Humidity</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="hourlyForecastTableBody">
+                                    <!-- Hourly forecast data will be populated here by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Daily Forecast Table -->
         <div class="row mt-4">
             <div class="col-12">
                 <div class="card forecast-card">
                     <div class="card-body">
-                        <h3 class="text-white mb-4"><i class="fa-solid fa-calendar-days"></i> Weather Forecast for next 5 days..</h3>
+                        <h3 class="text-white mb-4"><i class="fa-solid fa-calendar-days"></i> Next 5 Days Forecast</h3>
                         <div class="table-responsive">
                             <table class="table table-dark table-hover forecast-table">
                                 <thead>
                                     <tr>
                                         <th>Date</th>
+                                        <th>Condition</th>
                                         <th>Max Temp</th>
                                         <th>Min Temp</th>
                                         <th>Rain Chance</th>
                                         <th>Humidity</th>
+                                        <th>Wind</th>
                                     </tr>
                                 </thead>
                                 <tbody id="forecastTableBody">
-                                    <!-- Forecast data will be populated here by JavaScript -->
+                                    <!-- Daily forecast data will be populated here by JavaScript -->
                                 </tbody>
                             </table>
                         </div>

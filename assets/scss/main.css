@@ -437,6 +437,9 @@ header .row body.dark-theme {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
+.forecast-card.hourly-forecast-card {
+  background: linear-gradient(135deg, rgba(41, 52, 99, 0.9), rgba(25, 29, 43, 0.9));
+}
 .forecast-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
@@ -444,17 +447,19 @@ header .row body.dark-theme {
 .forecast-card .card-body {
   padding: 2rem;
 }
-.forecast-card h3 {
-  color: #000000;
-  text-transform: capitalize;
-  font-weight: 600 !important;
-}
 .forecast-card h3 i {
   margin-right: 0.5rem;
 }
 
 .forecast-table {
   margin-bottom: 0;
+}
+.forecast-table.hourly-forecast-table th {
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 0.9rem;
+}
+.forecast-table.hourly-forecast-table td {
+  font-size: 0.95rem;
 }
 .forecast-table th, .forecast-table td {
   vertical-align: middle;

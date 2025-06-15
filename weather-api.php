@@ -30,18 +30,28 @@ function getWeatherData($city = null) {
             $status = $match[1];
             
             if ($status !== "200") {
+                error_log("Weather API Error: " . $response);
                 return ['error' => true, 'message' => 'City not found. Please try another location.'];
             }
         }
         
         // Check for valid response
         if ($response === FALSE) {
+            error_log("Weather API Error: Failed to get response");
             return ['error' => true, 'message' => 'Unable to fetch weather data.'];
         }
         
         $data = json_decode($response, true);
         if (json_last_error() !== JSON_ERROR_NONE) {
+            error_log("Weather API Error: Invalid JSON - " . json_last_error_msg());
             return ['error' => true, 'message' => 'Invalid response from weather service.'];
+        }
+        
+        // Validate forecast data
+        if (!isset($data['forecast']) || !isset($data['forecast']['forecastday'])) {
+            error_log("Weather API Error: Missing forecast data");
+            error_log("Response: " . print_r($data, true));
+            return ['error' => true, 'message' => 'Invalid forecast data received.'];
         }
         
         return $data;
