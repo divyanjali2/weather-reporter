@@ -128,10 +128,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             <tr>
                                 <td>${formattedTime}</td>
                                 <td>${hour.temp_c}°C</td>
-                                <td>${hour.feelslike_c}°C</td>
                                 <td>${hour.chance_of_rain}%</td>
                                 <td>${hour.humidity}%</td>
-                                <td>${hour.wind_kph} km/h</td>
                             </tr>
                         `;
                         hourlyForecastTableBody.innerHTML += row;

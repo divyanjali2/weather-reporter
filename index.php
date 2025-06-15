@@ -211,9 +211,7 @@ $currentDate = date('d - m - Y');
                                 <thead>
                                     <tr>
                                         <th>Time</th>
-                                        <th>Condition</th>
                                         <th>Temperature</th>
-                                        <th>Feels Like</th>
                                         <th>Rain Chance</th>
                                         <th>Humidity</th>
                                     </tr>
