@@ -7,7 +7,6 @@ window.addEventListener('load', function() {
 
 // Weather functionality
 document.addEventListener("DOMContentLoaded", function () {
-    // defaultCity is defined in the PHP file
     const searchInput = document.getElementById("citySearch");
     const searchButton = searchInput.nextElementSibling;
     const searchSpinner = document.getElementById("searchSpinner");
@@ -91,8 +90,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Update forecast table
                 const forecastTableBody = document.getElementById('forecastTableBody');
                 const hourlyForecastTableBody = document.getElementById('hourlyForecastTableBody');
-                forecastTableBody.innerHTML = ''; // Clear existing rows
-                hourlyForecastTableBody.innerHTML = ''; // Clear existing rows
+                forecastTableBody.innerHTML = ''; 
+                hourlyForecastTableBody.innerHTML = ''; 
 
                 console.log('Received weather data:', data); // Debug log
 
@@ -213,9 +212,7 @@ document.addEventListener("DOMContentLoaded", function () {
         handleSearch();
     });
 
-    // Add input event listener for real-time validation
     searchInput.addEventListener("input", function() {
-        // Remove any non-letter characters except spaces and hyphens
         this.value = this.value.replace(/[^a-zA-Z\s-]/g, '');
     });
 
@@ -223,6 +220,5 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCurrentTime();
     setInterval(updateCurrentTime, 60000);
 
-    // Load default city on page load
     updateWeather(defaultCity);
 });

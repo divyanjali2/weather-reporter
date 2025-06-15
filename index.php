@@ -9,7 +9,7 @@ $current = $weatherData['current'] ?? null;
 $location = $weatherData['location'] ?? null;
 
 // Format current date
-$currentDate = date('d - m - Y');
+$currentDate = date('d-m-Y');
 ?>
 
 <!DOCTYPE html>
