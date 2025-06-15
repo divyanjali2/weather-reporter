@@ -205,7 +205,7 @@ $currentDate = date('d - m - Y');
             <div class="col-12">
                 <div class="card forecast-card hourly-forecast-card">
                     <div class="card-body">
-                        <h3 class="text-white mb-4"><i class="fa-solid fa-clock"></i> Next 3 Hours Forecast</h3>
+                        <h3 class="text-white mb-4"><i class="fa-solid fa-clock"></i> Weather Forecast for next 3 hours..</h3>
                         <div class="table-responsive">
                             <table class="table table-dark table-hover forecast-table hourly-forecast-table">
                                 <thead>
@@ -230,7 +230,7 @@ $currentDate = date('d - m - Y');
             <div class="col-12">
                 <div class="card forecast-card">
                     <div class="card-body">
-                        <h3 class="text-white mb-4"><i class="fa-solid fa-calendar-days"></i> Next 5 Days Forecast</h3>
+                        <h3 class="text-white mb-4"><i class="fa-solid fa-calendar-days"></i> Weather Forecast for next 5 days..</h3>
                         <div class="table-responsive">
                             <table class="table table-dark table-hover forecast-table">
                                 <thead>
