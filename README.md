@@ -24,7 +24,7 @@ A modern, responsive weather reporting website that provides real-time weather i
 
 1. Clone the repository to your local server directory:
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/divyanjali2/weather-reporter.git
    cd weather-reporter-website
    ```
 
