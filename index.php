@@ -211,7 +211,6 @@ $currentDate = date('d - m - Y');
                                 <thead>
                                     <tr>
                                         <th>Date</th>
-                                        <th>Condition</th>
                                         <th>Max Temp</th>
                                         <th>Min Temp</th>
                                         <th>Rain Chance</th>

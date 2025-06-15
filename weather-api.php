@@ -9,7 +9,7 @@ if (!defined('WEATHER_API_KEY')) {
 function getWeatherData($city = null) {
     // Use default city from config if none provided
     $city = $city ?? DEFAULT_CITY;
-    $apiUrl = "https://api.weatherapi.com/v1/forecast.json?key=" . WEATHER_API_KEY . "&q=" . urlencode($city) . "&days=5";
+    $apiUrl = "https://api.weatherapi.com/v1/forecast.json?key=" . WEATHER_API_KEY . "&q=" . urlencode($city) . "&days=6";
     
     // Use try-catch to handle any errors
     try {

@@ -446,6 +446,8 @@ header .row body.dark-theme {
 }
 .forecast-card h3 {
   color: #000000;
+  text-transform: capitalize;
+  font-weight: 600 !important;
 }
 .forecast-card h3 i {
   margin-right: 0.5rem;

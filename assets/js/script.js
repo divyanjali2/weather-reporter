@@ -93,7 +93,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 forecastTableBody.innerHTML = ''; // Clear existing rows
 
                 if (data.forecast && data.forecast.forecastday) {
-                    data.forecast.forecastday.forEach(day => {
+                    const today = new Date().toDateString();
+                    // Filter out today's date and get next 5 days
+                    const futureDays = data.forecast.forecastday
+                        .filter(day => new Date(day.date).toDateString() !== today)
+                        .slice(0, 5);  // Get only the next 5 days
+                    
+                    futureDays.forEach(day => {
                         const date = new Date(day.date);
                         const formattedDate = date.toLocaleDateString('en-US', {
                             weekday: 'short',
@@ -108,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <td>${day.day.mintemp_c}°C</td>
                                 <td>${day.day.daily_chance_of_rain}%</td>
                                 <td>${day.day.avghumidity}%</td>
-                                <td>${day.day.maxwind_kph} km/h</td>
                             </tr>
                         `;
                         forecastTableBody.innerHTML += row;
