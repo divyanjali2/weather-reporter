@@ -17,10 +17,46 @@
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-
+    #homeHero {
+        .homehero-content {
+            .overview {
+                h1 {
+                    font-size: 26px !important;
+                }
+            }
+            
+            .weather-detail {
+                p {
+                    font-size: 18px !important;
+                }
+            }
+        }
+    }
 }
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
+    header {
+        .header-logo {
+            height: 60px !important;
+        }
+    }
+
+    #homeHero {
+        .homehero-content {
+            .overview {
+                h1 {
+                    font-size: 30px !important;
+                    margin-top: 4%;
+                }
+            }   
+
+            .weather-detail {
+                p {
+                    font-size: 22px !important;
+                }
+            }
+        }
+    }
 
 }
