@@ -1,7 +1,6 @@
 <?php
 
 require 'vendor/autoload.php';
-require 'php/functions.php';
 
 // Load environment variables from the .env file
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
