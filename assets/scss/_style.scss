@@ -219,7 +219,7 @@ header {
         }
 
         .main-weather-card {
-            background: linear-gradient(135deg, rgb(76 99 156 / 73%), rgb(35 30 58));
+            background: linear-gradient(135deg, rgba(76, 99, 156, 0.6), rgba(35, 30, 58, 0.6));
             backdrop-filter: blur(10px);
             border: none;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -283,7 +283,8 @@ header {
         }
 
         .wind-detail-card {
-            background: linear-gradient(144deg, rgb(6 60 124 / 90%), rgb(220 79 141 / 90%));            backdrop-filter: blur(10px);
+            background: linear-gradient(144deg, rgba(6, 60, 124, 0.7), rgba(220, 79, 141, 0.7));
+            backdrop-filter: blur(10px);
             border: none;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
@@ -328,17 +329,17 @@ header {
 
             // Alternate gradient for every other card
             &:nth-child(2) {
-                background: linear-gradient(135deg, rgb(16 101 97), rgb(196 113 140 / 49%));            
+                background: linear-gradient(135deg, rgba(16, 101, 97, 0.7), rgba(196, 113, 140, 0.4));            
             }
 
             &:nth-child(3) {
-                background: linear-gradient(135deg, rgb(71 26 191), rgb(239 156 137 / 90%));            
+                background: linear-gradient(135deg, rgba(71, 26, 191, 0.7), rgba(239, 156, 137, 0.7));            
             }
         }
 
         // Location details card styles
         .location-details-card {
-            background: linear-gradient(135deg, rgba(49, 62, 80, 0.9), rgba(25, 29, 43, 0.9));
+            background: linear-gradient(135deg, rgba(49, 62, 80, 0.7), rgba(25, 29, 43, 0.7));
             backdrop-filter: blur(10px);
             border: none;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -492,6 +493,89 @@ header {
             align-items: center;
             gap: 0.5rem;
             font-weight: 500;
+        }
+    }
+}
+
+// Forecast table styles
+.forecast-card {
+    background: linear-gradient(135deg, rgba(49, 62, 80, 0.7), rgba(25, 29, 43, 0.7));
+    backdrop-filter: blur(10px);
+    border: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body {
+        padding: 2rem;
+    }
+
+    h3 {
+        color: $black;
+        text-transform: capitalize;
+        font-weight: 600 !important;
+
+        i {
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+.forecast-table {
+    margin-bottom: 0;
+    
+    th, td {
+        vertical-align: middle;
+        text-align: center;
+        padding: 1rem;
+        color: rgba(255, 255, 255, 0.9);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    th {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+
+    tbody tr {
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+    }
+
+    .forecast-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 0.5rem;
+        vertical-align: middle;
+    }
+}
+
+// Responsive styles for the forecast table
+@media (max-width: 768px) {
+    .forecast-table {
+        th, td {
+            padding: 0.75rem 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        th {
+            font-size: 0.8rem;
+        }
+
+        .forecast-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 0.25rem;
         }
     }
 }
