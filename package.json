@@ -6,5 +6,8 @@
   "scripts": {
     "start": "sass --watch assets/scss:assets/css --style expanded",
     "build": "sass assets/scss:assets/css --style compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.89.2"
   }
 }
