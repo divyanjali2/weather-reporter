@@ -1,26 +1,26 @@
-# Weather Reporter Website
+# Weather Reporter Website 🌦️
 
 A modern, responsive weather reporting website that provides real-time weather information, hourly forecasts, and weather forecasts for 5 days using the WeatherAPI.com service.
 
-## Features
+## Features 🌞⛅🌧️
 
-- Real-time weather data
-- Current weather conditions with detailed metrics
-- Hourly forecast for the next 4 hours
-- 5-day weather forecast
-- Location-based weather information
-- Responsive design for all devices
-- Eye-catching UI with gradient cards and subtle blur effects.
-- Loading animations and toast notifications
+- Real-time weather data ⏱️
+- Current weather conditions with detailed metrics 📊
+- Hourly forecast for the next 4 hours 🕓
+- 5-day weather forecast 📅
+- Location-based weather information 📍
+- Responsive design for all devices 📱💻
+- Eye-catching UI with gradient cards and subtle blur effects 🎨
+- Loading animations and toast notifications ⏳💫
 
-## Prerequisites
+## Prerequisites⚙️
 
 - PHP 7.4 or higher
 - XAMPP/WAMP/MAMP or any PHP server
 - Node.js and npm
 - WeatherAPI.com API key
 
-## Installation
+## Installation 🚀
 
 1. Clone the repository to your local server directory:
    ```bash
@@ -42,7 +42,7 @@ A modern, responsive weather reporting website that provides real-time weather i
 
 The project uses SCSS for styling. The SCSS files are located in the `assets/scss` directory.
 
-### SCSS File Structure
+### SCSS File Structure 📁
 
 ```
 assets/scss/
@@ -53,7 +53,7 @@ assets/scss/
 └── main.scss        # Entry point
 ```
 
-### Compiling SCSS
+### Compiling SCSS ⚡
 
 1. Install SASS globally if you haven't already:
    ```bash
@@ -70,7 +70,7 @@ assets/scss/
    sass --watch assets/scss:assets/css --style expanded
    ```
 
-## Project Structure
+## Project Structure 📂
 
 ```
 weather-reporter-website/
@@ -87,7 +87,7 @@ weather-reporter-website/
 └── README.md       # Documentation
 ```
 
-## Running the Project
+## Running the Project 🏁
 
 1. Start your local PHP server (XAMPP/WAMP/MAMP)
 2. Place the project in the server's web root directory
@@ -96,7 +96,7 @@ weather-reporter-website/
    http://localhost/weather-reporter-website
    ```
 
-## Development
+## Development 👨‍💻
 
 To start development with automatic SCSS compilation and live updates:
 
@@ -108,7 +108,7 @@ To start development with automatic SCSS compilation and live updates:
 3. Make changes to SCSS files in `assets/scss/`
 4. Changes will automatically compile to `assets/css/main.css`
 
-## Dependencies
+## Dependencies 📦
 
 ### PHP Dependencies (via Composer)
 - DotEnv
@@ -117,7 +117,7 @@ To start development with automatic SCSS compilation and live updates:
 - Bootstrap
 - Font Awesome
 
-## Browser Support
+## Browser Support 🌍
 
 - Chrome (latest)
 - Firefox (latest)
@@ -125,7 +125,7 @@ To start development with automatic SCSS compilation and live updates:
 - Edge (latest)
 - Opera (latest)
 
-## Contributing
+## Contributing 🤝
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -133,14 +133,13 @@ To start development with automatic SCSS compilation and live updates:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Acknowledgments
+## Acknowledgments 🙏
 
 - WeatherAPI.com for providing the weather data
 - Bootstrap team for the framework
 - Font Awesome for the icons
 
-
-## Live Demo
+## Live Demo 🌐
 
 Check out the live version of the site:
 
