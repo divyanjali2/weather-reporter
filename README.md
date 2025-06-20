@@ -1,17 +1,17 @@
-# Weather Reporter Website
+# Weather Reporter Website 🌦️
 
 A modern, responsive weather reporting website that provides real-time weather information, hourly forecasts, and weather forecasts for 5 days using the WeatherAPI.com service.
 
-## Features
+Features 🌞⛅🌧️
 
-- Real-time weather data
-- Current weather conditions with detailed metrics
-- Hourly forecast for the next 4 hours
-- 5-day weather forecast
-- Location-based weather information
-- Responsive design for all devices
-- Eye-catching UI with gradient cards and subtle blur effects.
-- Loading animations and toast notifications
+Real-time weather data ⏱️
+Current weather conditions with detailed metrics 📊
+Hourly forecast for the next 4 hours 🕓
+5-day weather forecast 📅
+Location-based weather information 📍
+Responsive design for all devices 📱💻
+Eye-catching UI with gradient cards and subtle blur effects 🎨
+Loading animations and toast notifications ⏳💫
 
 ## Prerequisites
 
