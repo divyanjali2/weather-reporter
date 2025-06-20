@@ -138,3 +138,11 @@ To start development with automatic SCSS compilation and live updates:
 - WeatherAPI.com for providing the weather data
 - Bootstrap team for the framework
 - Font Awesome for the icons
+
+
+## Live Demo
+
+Check out the live version of the site:
+
+[http://54.145.224.28/](http://54.145.224.28/)
+
