@@ -6,7 +6,7 @@ A modern, responsive weather reporting website that provides real-time weather i
 
 - Real-time weather data ⏱️
 - Current weather conditions with detailed metrics 📊
-- Hourly forecast for the next 4 hours 🕓
+- Hourly forecast  🕓
 - 5-day weather forecast 📅
 - Location-based weather information 📍
 - Responsive design for all devices 📱💻
